@@ -38,6 +38,8 @@ def page_predict_house_price_body():
 
 	st.write("---")
 
+	st.write("### Predict house sale prices in Ames, Iowa")
+
 	# Generate Live Data
 	X_live = DrawInputsWidgets()
 
@@ -95,6 +97,6 @@ def DrawInputsWidgets():
 			)
 	X_live[feature] = st_widget
 
-	st.write(X_live)
+	# st.write(X_live)
 
 	return X_live

@@ -30,7 +30,7 @@ def page_ML_regressor_model_body():
     st.write("---")
 
     # show pipeline steps
-    st.write("* ML pipeline to predict tenure when prospect is expected to churn")
+    st.write("* ML pipeline to predict house sale price")
     st.write(pipeline)
     st.write("---")
 
@@ -42,5 +42,6 @@ def page_ML_regressor_model_body():
 
     # evaluate performance on both sets
     regression_performance(X_train=X_train, y_train=y_train, X_test=X_test, y_test=y_test, pipeline=pipeline)
+    
     regression_evaluation_plots(X_train=X_train, y_train=y_train, X_test=X_test, y_test=y_test, pipeline=pipeline, alpha_scatter=0.5)
 

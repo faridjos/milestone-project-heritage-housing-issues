@@ -1,5 +1,5 @@
 import streamlit as st
-from src.data_management import load_house_prices_data
+from src.data_management import load_house_price_data
 from src.data_management import load_corr
 from src.data_management import load_pkl_file
 # st.set_option('deprecation.showPyplotGlobalUse', False)
@@ -14,7 +14,7 @@ import numpy as np
 def page_house_prices_study_body():
 
     # load data
-    df = load_house_prices_data()
+    df = load_house_price_data()
     df_corr = load_corr()
     dic = load_pkl_file('outputs/house_prices_study/v1/dic.pkl')
 

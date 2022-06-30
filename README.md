@@ -47,17 +47,57 @@ Although your friend has an excellent understanding of property prices in her ow
 
 
 ## Rationale to map the business requirements to the Data Visualizations and ML tasks
-* List your business requirements and a rationale to map them to the Data Visualizations and ML tasks
+* Business requirement 1: Correlation study and data visualization
+    * As a client I want to inspect the house records data so that I can get an idea of which variables are important for the sale price.
+    * As a client I want to display a heatmap of the spearman correlation coefficients so that I can order the variables by importance concerning the sale price.
+    * As a client I want to plot the important variables against the sale price so that I can visualize how such a variable is correlated with the sale price. 
+* Business requirement 2:
+    * As a client I want to display the inherited houses records data so that I can easily find a house attribute.
+    * As a client I want to use an ML model so that I can predict the price of my four inherited houses in Ames, Iowa.
+    * As a client I want to use the ML model so that I can predict the price of any other house in Ames, Iowa.
+-
 
 
 ## ML Business Case
-* In the previous bullet, you potentially visualized a ML task to answer a business requirement. You should frame the business case using the method we covered in the course 
+1. What are the business requirements?
+    * The client is interested in discovering how house attributes correlate with sale prices. Therefore, the client expects data visualizations of the correlated variables against the sale price.
+    * The client is interested in predicting the house sale prices from her 4 inherited houses, and any other house in Ames, Iowa.
+2. Is there any business requirement that can be answered with conventional data analysis?
+    * Yes, we can use conventional data analysis to investigate how house attributes are correlated with the sale prices.
+3. Does the client need a dashboard or an API endpoint?
+    * The client needs a dashboard
+4. What does the client consider as a successful project outcome?
+    * A study showing the most relevant variables correlated to sale price.
+    * Also, a capability to predict the sale price for the 4 inherited houses, as well as any other house in Ames, Iowa.
+5. Can you break down the project into Epics and User Stories?
+    * Information gathering and data collection.
+    * Data visualization, cleaning, and preparation.
+    * Model training, optimization and validation.
+    * Dashboard planning, designing, and development.
+    * Dashboard deployment and release.
+6. Ethical or Privacy concerns?
+    * No. The client found a public dataset.
+7. Does the data suggest a particular model?
+    * The data suggests a regressor where the target is the sale price.
+8. What are the model's inputs and intended outputs?
+    * The inputs are house attribute information and the output is the predicted sale price.
+9. What are the criteria for the performance goal of the predictions?
+    * We agreed with the client on an R2 score of at least 0.75 on the train set as well as on the test set.
+10. How will the client benefit?
+    * The client will maximize the sales price for the inherited properties. 
 
 
 ## Dashboard Design
-* List all dashboard pages and its content, either block of information or widgets, like: buttons, checkbox, image, or any other item that your dashboard library supports.
-* Eventually, during the project development, you may revisit your dashboard plan to update a give feature (for example, in the beginning of the project you were confident you would use a given plot to display an insight but eventually you needed to use another plot type)
-
+The dashboard consists of five pages:
+1. The first page describes the project dataset and states the business requiremnents.
+2. The second page fullfills the first project requirement. It starts with stating the requirement in an info box. Three checkboxes implement the user stories relating to the first project requirement (see ref). When checked they display:
+    * A table showing the dataset.
+    * A heatmap of Spearman correlation coefficents.
+    * Scatterplots of correlated variables against sell price.
+The page also has a description of the meaning of the variables and a general conclusion.
+3. The third page fullfills the second project requirement. It has two tables showing the client's inherited houses data and predicted sale prices respectively. The sum of the sale prices is also displayed. The second part of the page has three input widgets and a button that enables the user to predict the sale price based on the inputs.
+4. The fourth page states the project hypothesis and its validation.
+5. The fifth page starts with a general conclusion about the performance of the ML model. The pipeline steps are then presented followed by a bar plot showing the importance of each feature in the train set. The remaining two parts evaluate the ML model by computing the R2 score and three different error measures and by displaying a scatter plot of predicted versus actual sale price (which is the target).
 
 
 ## Unfixed Bugs

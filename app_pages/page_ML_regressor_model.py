@@ -30,12 +30,12 @@ def page_ML_regressor_model_body():
     st.write("---")
 
     # show pipeline steps
-    st.write("* ML pipeline to predict house sale price")
+    st.write("* **ML pipeline to predict house sale price**")
     st.write(pipeline)
     st.write("---")
 
     # show best features
-    st.write("* The features the model was trained on and their importance")
+    st.write("* **The features the model was trained on and their importance**")
     st.write(X_train.columns.to_list())
     st.image(house_price_feat_importance)
     st.write("---")
@@ -43,5 +43,7 @@ def page_ML_regressor_model_body():
     # evaluate performance on both sets
     regression_performance(X_train=X_train, y_train=y_train, X_test=X_test, y_test=y_test, pipeline=pipeline)
     
+    st.write("---")
+    st.write("* **Predicted versus actual sale price scatterplot**")
     regression_evaluation_plots(X_train=X_train, y_train=y_train, X_test=X_test, y_test=y_test, pipeline=pipeline, alpha_scatter=0.5)
 

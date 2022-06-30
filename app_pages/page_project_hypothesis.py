@@ -22,7 +22,7 @@ def page_project_hypothesis_body():
     plot_histogram_and_boxplot(df2)         
 
         
-    st.success(
+    st.info(
         f"* There is a problem when it comes to predicting high sale prices."
         f" This is confirmed by the fact that our model does not predict prices above $457199.  \n"
         f"* This could be connected to the outliers with sale prices above $466075 but it cannot"

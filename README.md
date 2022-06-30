@@ -1,3 +1,16 @@
+## Table of contents
+
+- [Dataset Content](#dataset-content)
+- [Business Requirements](#business-requirements)
+- [Project hypothesis and validation](#project-hypothesis-and-validation)
+- [Rationale to map the business requirements to the Data Visualizations and ML tasks](#rationale-to-map-the-business-requirements-to-the-data-visualizations-and-ml-tasks)
+- [ML Business Case](#ml-business-case)
+- [Dashboard Design](#dashboard-design)
+- [Unfixed Bugs](#unfixed-bugs)
+- [Deployment to Heroku](#deployment-to-heroku)
+- [Main Data Analysis and Machine Learning Libraries](#main-data-analysis-and-machine-learning-libraries)
+- [Credits](#credits)
+
 ## Dataset Content
 * The dataset is sourced from [Kaggle](https://www.kaggle.com/codeinstitute/housing-prices-data). We created then a fictitious user story where predictive analytics can be applied in a real project in the workplace. 
 * The dataset has almost 1.5 thousand rows and represents housing records from Ames, Iowa; indicating house profile (Floor Area, Basement, Garage, Kitchen, Lot, Porch, Wood Deck, Year Built) and its respective sale price for houses built between 1872 and 2010.
@@ -29,9 +42,7 @@
 |YearRemodAdd|Remodel date (same as construction date if no remodeling or additions)|1950 - 2010|
 |SalePrice|Sale Price|34900 - 755000|
 
-
-
-
+[Back to Table of contents](#table-of-contents)
 
 ## Business Requirements
 As a good friend, you are requested by your friend, who has received an inheritance from a deceased great-grandfather located in Ames, Iowa, to  help in maximizing the sales price for the inherited properties.
@@ -41,10 +52,12 @@ Although your friend has an excellent understanding of property prices in her ow
 * 1 - The client is interested in discovering how the house attributes correlate with the sale price. Therefore, the client expects data visualizations of the correlated variables against the sale price to show that.
 * 2 - The client is interested to predict the house sales price from her 4 inherited houses, and any other house in Ames, Iowa.
 
+[Back to Table of contents](#table-of-contents)
 
-## Hypothesis and how to validate?
-* List here your project hypothesis(es) and how you envision to validate it (them) 
+## Project hypothesis and validation.
+* We suspect that the distribution of the sale prices has a long right tail and that it could lead to a problem when it comes to predicting high sale prices.
 
+[Back to Table of contents](#table-of-contents)
 
 ## Rationale to map the business requirements to the Data Visualizations and ML tasks
 * Business requirement 1: Correlation study and data visualization
@@ -55,8 +68,8 @@ Although your friend has an excellent understanding of property prices in her ow
     * As a client I want to display the inherited houses records data so that I can easily find a house attribute.
     * As a client I want to use an ML model so that I can predict the price of my four inherited houses in Ames, Iowa.
     * As a client I want to use the ML model so that I can predict the price of any other house in Ames, Iowa.
--
 
+[Back to Table of contents](#table-of-contents)
 
 ## ML Business Case
 1. What are the business requirements?
@@ -86,6 +99,7 @@ Although your friend has an excellent understanding of property prices in her ow
 10. How will the client benefit?
     * The client will maximize the sales price for the inherited properties. 
 
+[Back to Table of contents](#table-of-contents)
 
 ## Dashboard Design
 The dashboard consists of five pages:
@@ -99,45 +113,46 @@ The page also has a description of the meaning of the variables and a general co
 4. The fourth page states the project hypothesis and its validation.
 5. The fifth page starts with a general conclusion about the performance of the ML model. The pipeline steps are then presented followed by a bar plot showing the importance of each feature in the train set. The remaining two parts evaluate the ML model by computing the R2 score and three different error measures and by displaying a scatter plot of predicted versus actual sale price (which is the target).
 
+[Back to Table of contents](#table-of-contents)
 
 ## Unfixed Bugs
-* You will need to mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a big variable to consider, paucity of time and difficulty understanding implementation is not a valid reason to leave bugs unfixed.
+* There is no unfixed bugs.
 
-## Deployment
-### Heroku
+[Back to Table of contents](#table-of-contents)
 
-* The App live link is: https://YOUR_APP_NAME.herokuapp.com/ 
-* The project was deployed to Heroku using the following steps.
+## Deployment to Heroku
 
-1. Log in to Heroku and create an App
-2. At the Deploy tab, select GitHub as the deployment method.
-3. Select your repository name and click Search. Once it is found, click Connect.
-4. Select the branch you want to deploy, then click Deploy Branch.
-5. The deployment process should happen smoothly in case all deployment files are fully functional. Click now the button Open App on the top of the page to access your App.
+* The App live link is: https://housepricesfarid.herokuapp.com// 
+* The project was deployed to Heroku using the following steps:
+1. Create a Procfile which tells Heroku how to run the project
+2. Create a setup.sh file containing the streamlit configuration requirements 
+3. Heroku needs the requirements.txt which contains all external libraries used in the project
+4. Log in to Heroku and create an App
+5. At the Deploy tab, select GitHub as the deployment method
+6. Select your repository name and click Search. Once it is found, click Connect
+7. Select the branch you want to deploy, then click Deploy Branch
+8. One may also enable automatic deploys so that the app is updated for every push to Github
+Click now the button Open App on the top of the page to access your App
 
+[Back to Table of contents](#table-of-contents)
 
 ## Main Data Analysis and Machine Learning Libraries
-* Here you should list the libraries you used in the project and provide example(s) on how you used these libraries.
+The libraries used in this project are:
+- numpy==1.19.1
+- pandas==1.1.2
+- matplotlib==3.3.1
+- seaborn==0.11.0
+- pandas-profiling==3.2.0
+- streamlit==1.10.0
+- feature-engine==1.0.2
+- scikit-learn==0.24.2
 
+As an example, Seaborn was used to creating the heatmap of correlation coefficients, pandas-profiling to explore the variables in the dataset by showing their distribution, how many missing data they contain etc. 
+
+[Back to Table of contents](#table-of-contents)
 
 ## Credits 
 
-* In this section you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism. 
-* You can break the credits section up into Content and Media, depending on what you have included in your project. 
+My main inspiration came from the Code Institute Churnometer walkthrough project and the Scikit-learn lesson in the Data Analysis and Machine Learning Toolkit module (also from the Code Institute). The structure of the project and most of the code is taken from there and adapted to this project. 
 
-### Content 
-
-- The text for the Home page was taken from Wikipedia Article A
-- Instructions on how to implement form validation on the Sign Up page was taken from [Specific YouTube Tutorial](https://www.youtube.com/)
-- The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
-
-### Media
-
-- The photos used on the home and sign up page are from This Open Source site
-- The images used for the gallery page were taken from this other open source site
-
-
-
-## Acknowledgements (optional)
-* In case you would like to thank the people that provided support through this project.
-
+[Back to Table of contents](#table-of-contents)

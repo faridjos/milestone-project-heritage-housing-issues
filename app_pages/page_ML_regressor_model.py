@@ -25,7 +25,7 @@ def page_ML_regressor_model_body():
         f"* We agreed with the client on an R2 score of at least 0.75 on both train and test "
         f"set.  \n"
         f"* Our pipeline achieves 0.83 and 0.76 on train set and test set respectively  \n"    
-        f"* We notice that our model does not predict prices above $457199. This is probably "
+        f"* We notice that our model does not predict prices above $457199. This is possibly"
         f" connected to the fact that the distribution of actual sale prices has a very long tail.")
     st.write("---")
 

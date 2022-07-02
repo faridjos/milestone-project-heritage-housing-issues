@@ -1,4 +1,5 @@
 import streamlit as st
+import numpy as np
 import pandas as pd
 from src.data_management import load_house_price_data, load_pkl_file
 #from src.machine_learning.predictive_analysis_ui import (predict_sale_price)
@@ -23,6 +24,7 @@ def page_predict_house_price_body():
 
 	df = df.filter(best_features)
 	house_price_prediction = pipeline.predict(df).round(0)
+	
 	df['Predicted House Sale Price'] = house_price_prediction
 
 	st.write(
@@ -58,7 +60,7 @@ def DrawInputsWidgets():
 	percentageMin, percentageMax = 0.5, 2.0
 
     # we create input widgets only for 6 features	
-	col1, col2, col3 = st.columns(3)
+	col1, col2 = st.columns(2)
 
 	# We are using these features to feed the ML pipeline - values copied from check_variables_for_UI() result
 		
@@ -84,16 +86,6 @@ def DrawInputsWidgets():
 		st_widget = st.selectbox(
 			label= feature,
 			options= df[feature].sort_values(ascending=True).unique()
-			)
-	X_live[feature] = st_widget
-
-	with col3:
-		feature = 'TotalBsmtSF'
-		st_widget = st.number_input(
-	 		label= feature,
-			min_value= df[feature].min()*percentageMin,
-			max_value= df[feature].max()*percentageMax,
-			value= df[feature].median()
 			)
 	X_live[feature] = st_widget
 

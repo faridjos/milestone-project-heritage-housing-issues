@@ -45,6 +45,8 @@ def page_predict_house_price_body():
 	st.write("### Predict house sale prices in Ames, Iowa  \n")
 	st.write("* Only the two house attributes 'Above Ground Living Area Square Feet' and 'Overall Quality' "
 	"are needed for the ML model to predict the price.")
+	st.warning("* When the 'Above Ground Living Area Square Feet' reaches 3000 the model becomes inaccurate and for "
+	"high values it gives nonsensical results.")
 
 
 	# Generate Live Data

@@ -46,7 +46,8 @@ def page_ML_regressor_model_body():
      
     st.write("* **Predicted versus actual sale price scatterplot**")
     st.info("* We notice that our model does not accurately predict prices above $400000. "
-    "This can be seen clearly on the scatterplot showing the predictions on the test set (right plot below)."
+    "This can be seen clearly on the scatterplot showing the predictions on the test set (right plot below). "
+    "At these prices the datapoints are few but they do not follow the red line. "
     )
     regression_evaluation_plots(X_train=X_train, y_train=y_train, X_test=X_test, y_test=y_test, pipeline=pipeline, alpha_scatter=0.5)
 

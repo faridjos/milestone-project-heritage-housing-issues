@@ -84,17 +84,18 @@ def page_house_prices_study_body():
     # Scatterplots
     if st.checkbox("Scatterplots for the seven most important attributes. They show how sale price increases with "
     "the value of the attribute, for example 'Overall Quality'."):
+    
+        st.success(
+        f"* The plots below confirm the expectation that the stronger the correlation the clearer the trend.  \n"
+    )
+        st.warning(
+        f"* We also see that the spread in price increases with price.  \n"
+    )
         st.write(f"* Plot Sale Price against attribute")
         scatterplot(df, dic, strongly_correlated, dtype_dict)
 
-    st.success(
-        f"* The plots below confirm the expectation that the stronger the correlation the clearer the trend.  \n"
-    )
 
-    
-
-
-# function created using "HouseSalePrices" notebook code - Heatmap section
+    # function created using "HouseSalePrices" notebook code - Heatmap section
 def heatmap(df):
     import numpy as np
     import matplotlib.pyplot as plt

@@ -10,10 +10,11 @@ def page_project_hypothesis_body():
 
     # conclusions taken House Sale Prices notebook 
     st.success(
-        f"* We suspect that the distribution of the sale prices has a long right tail."
-        f" The combined boxplot/histogram below confirms that.  \n"
-        f"* Outliers are defined to be outside the upper quantile by a distance equal to"
-        f" three times the interquantile range (IQR). This corresponds to sale prices"
+        f"* We suspect that there is a few very high sale prices."
+        f" The combined boxplot/histogram below confirms that: The histogram extends far to the right."
+        f" It has a long tail.  \n"
+        f"* The price values well beyond the average range are called outliers and are shown as dots "
+        f"to the right of the box in the boxplot. They correspond to sale prices"
         f" above $466075"
          
     )
@@ -23,8 +24,8 @@ def page_project_hypothesis_body():
 
         
     st.info(
-        f"* There is a problem when it comes to predicting high sale prices."
-        f" This is confirmed by the fact that our model does not predict prices above $457199.  \n"
-        f"* This could be connected to the outliers with sale prices above $466075 but it cannot"
-        f" be proven. Further investigation is needed.")
+        f"* The models we have created do not accurately predict sale prices above $400000 "
+        f"(see scatterplots on the ML Regressor Model page). \n"
+        f"* This could be connected to the outliers mentioned above (with sale prices above $466075)"
+        f" but it cannot be proven. Further investigation is needed.")
         

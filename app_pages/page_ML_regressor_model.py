@@ -24,9 +24,8 @@ def page_ML_regressor_model_body():
     st.info(
         f"* We agreed with the client on an R2 score of at least 0.75 on both train and test "
         f"set.  \n"
-        f"* Our pipeline achieves 0.83 and 0.76 on train set and test set respectively  \n"    
-        f"* We notice that our model does not predict prices above $457199. This is possibly"
-        f" connected to the fact that the distribution of actual sale prices has a very long tail.")
+        f"* Our pipeline achieves 0.86 and 0.80 on the train set and test set respectively  \n"    
+    )
     st.write("---")
 
     # show pipeline steps
@@ -44,6 +43,10 @@ def page_ML_regressor_model_body():
     regression_performance(X_train=X_train, y_train=y_train, X_test=X_test, y_test=y_test, pipeline=pipeline)
     
     st.write("---")
+     
     st.write("* **Predicted versus actual sale price scatterplot**")
+    st.info("* We notice that our model does not accurately predict prices above $400000. "
+    "This can be seen clearly on the scatterplot showing the predictions on the test set (right plot below)."
+    )
     regression_evaluation_plots(X_train=X_train, y_train=y_train, X_test=X_test, y_test=y_test, pipeline=pipeline, alpha_scatter=0.5)
 

@@ -42,9 +42,9 @@ def page_house_prices_study_body():
 
     # Correlation Study Summary
     st.write(
-        f"* A correlation study was conducted in the notebook to better understand how "
-        f"the variables are correlated to house sale price.  \n"
-        f"The seven most correlated variable are (in order of importance):  \n**{strongly_correlated}**.  \n\n"
+        f"* A correlation study was conducted in the notebook to find  "
+        f"the most important variables for determining the house sale price.  \n"
+        f"The seven most important variable are (in order of importance):  \n**{strongly_correlated}**.  \n\n"
     )
 
     # Meaning of variables: From README file - "Dataset Content" section
@@ -60,7 +60,7 @@ def page_house_prices_study_body():
     )
 
     st.write(
-        f"Seven other variables show moderate correlation with sale price (in order of importance):  \n"
+        f"Seven other variables are still important but to a lesser degree: They show moderate correlation with the sale price (shown in order of importance):  \n"
         f"**{moderately_correlated}**.  \n"
     )
 
@@ -76,17 +76,20 @@ def page_house_prices_study_body():
         f"* **{moderately_correlated[6]}**: Type 1 finished square feet of basement area. \n"
     )
 
-    st.success(
-        f"* The plots below confirm the expectation that the stronger the correlation the clearer the trend.  \n"
-    )
     # Heatmap of correlation coefficients above 0.4
-    if st.checkbox("Heatmap of correlation coefficients"):
+    if st.checkbox("Heatmap of the forteen variables in order of importance. We see that the two most important variables"
+    " are 'Overall Quality' and 'Above Ground Living Area Square Feet'."):
         heatmap(df_corr)
         
     # Scatterplots
-    if st.checkbox("Scatterplots for the seven strongly correlated attributes"):
+    if st.checkbox("Scatterplots for the seven most important attributes. They show how sale price increases with "
+    "the value of the attribute, for example 'Overall Quality'."):
         st.write(f"* Plot Sale Price against attribute")
         scatterplot(df, dic, strongly_correlated, dtype_dict)
+
+    st.success(
+        f"* The plots below confirm the expectation that the stronger the correlation the clearer the trend.  \n"
+    )
 
     
 

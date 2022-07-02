@@ -28,7 +28,9 @@ def page_predict_house_price_body():
 	df['Predicted House Sale Price'] = house_price_prediction
 
 	st.write(
-        f"* The table shows the predicted sale price for the four houses, together with the house features used in the prediction"
+        f"* The table shows the predicted sale price for the four houses, together with the house features used in the prediction, "
+		"which are the two most important variables we saw in the House Prices Study page: 'Overall Quality' and 'Above Ground Living "
+		"Area Square Feet.'"
 	)
 	st.write(df.head())
 
@@ -40,7 +42,10 @@ def page_predict_house_price_body():
 
 	st.write("---")
 
-	st.write("### Predict house sale prices in Ames, Iowa")
+	st.write("### Predict house sale prices in Ames, Iowa  \n")
+	st.write("* Only the two house attributes 'Above Ground Living Area Square Feet' and 'Overall Quality' "
+	"are needed for the ML model to predict the price.")
+
 
 	# Generate Live Data
 	X_live = DrawInputsWidgets()

@@ -24,7 +24,7 @@ def page_project_hypothesis_body():
 
         
     st.info(
-        f"* The models we have created do not accurately predict sale prices above $400000 "
+        f"* The models we have created may not accurately predict sale prices above $400000 "
         f"(see scatterplots on the ML Regressor Model page). \n"
         f"* This could be connected to the outliers mentioned above (with sale prices above $466075)"
         f" but it cannot be proven. Further investigation is needed.")

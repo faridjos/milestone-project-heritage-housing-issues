@@ -64,7 +64,7 @@ def DrawInputsWidgets():
 	percentageMin, percentageMax = 0.5, 1.0
 
     # we create input widgets only for two features	
-	col1, col2 = st.columns(2)
+	col1, col2 = st.beta_columns(2)
 
 	# We are using these features to feed the ML pipeline
 		

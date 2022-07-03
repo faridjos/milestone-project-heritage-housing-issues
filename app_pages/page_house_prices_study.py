@@ -2,8 +2,6 @@ import streamlit as st
 from src.data_management import load_house_price_data
 from src.data_management import load_corr
 from src.data_management import load_pkl_file
-# st.set_option('deprecation.showPyplotGlobalUse', False)
-
 
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -13,7 +11,8 @@ import numpy as np
 
 def page_house_prices_study_body():
 
-    # load data
+    # load housing data, correlation coefficients and a dictionary used in encoding
+    # object variables
     df = load_house_price_data()
     df_corr = load_corr()
     dic = load_pkl_file('outputs/house_prices_study/v1/dic.pkl')
@@ -29,7 +28,7 @@ def page_house_prices_study_body():
         f" Therefore, the client expects data visualizations of the correlated variables against the sale price to show that.")
 
 
-    # inspect data
+    # display housing data dataframe
     if st.checkbox("Inspect housing records dataset"):
         st.write(
             f"* The dataset has {df.shape[0]} rows and {df.shape[1]} columns, "
@@ -81,7 +80,7 @@ def page_house_prices_study_body():
     " are 'Overall Quality' and 'Above Ground Living Area Square Feet'."):
         heatmap(df_corr)
         
-    # Scatterplots
+    # Scatterplots of sale price against correlated variable
     if st.checkbox("Scatterplots for the seven most important attributes. They show how sale price increases with "
     "the value of the attribute, for example 'Overall Quality'."):
     
@@ -95,7 +94,7 @@ def page_house_prices_study_body():
         scatterplot(df, dic, strongly_correlated, dtype_dict)
 
 
-    # function created using "HouseSalePrices" notebook code - Heatmap section
+    # function created using code from "HouseSalePrices" notebook - Heatmap section
 def heatmap(df):
     import numpy as np
     import matplotlib.pyplot as plt
@@ -113,7 +112,7 @@ def heatmap(df):
     st.pyplot(fig)
 
 
-# function created using "HouseSalePrices" notebook code- Scatter plot section
+# function created using code from "HouseSalePrices" notebook - Scatterplot section
 def scatterplot(df, dic, strongly_correlated, dtype_dict):
     for col in strongly_correlated:
         if df[col].dtype == 'object':

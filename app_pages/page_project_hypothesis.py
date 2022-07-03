@@ -8,7 +8,7 @@ def page_project_hypothesis_body():
 
     st.write("### Project Hypothesis and Validation")
 
-    # conclusions taken House Sale Prices notebook 
+    # conclusions taken from House Sale Prices notebook 
     st.success(
         f"* We suspect that there is a few very high sale prices."
         f" The combined boxplot/histogram below confirms that: The histogram extends far to the right."
@@ -19,6 +19,7 @@ def page_project_hypothesis_body():
          
     )
 
+    # plot combined boxplot/histogram of sale price 
     df2=df.filter(['SalePrice'])
     plot_histogram_and_boxplot(df2)         
 

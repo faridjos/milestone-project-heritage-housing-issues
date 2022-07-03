@@ -33,17 +33,18 @@ def page_ML_regressor_model_body():
     st.write(pipeline)
     st.write("---")
 
-    # show best features
+    # show best features and their importance for the ML model
     st.write("* **The features the model was trained on and their importance**")
     st.write(X_train.columns.to_list())
     st.image(house_price_feat_importance)
     st.write("---")
 
-    # evaluate performance on both sets
+    # evaluate performance on train and test sets
     regression_performance(X_train=X_train, y_train=y_train, X_test=X_test, y_test=y_test, pipeline=pipeline)
     
     st.write("---")
      
+    # Plot predicted versus actual sale price for train and test sets
     st.write("* **Predicted versus actual sale price scatterplot**")
     st.info("* We notice that our model may not accurately predict prices above $400000. "
     "This can be seen on the scatterplot showing the predictions on the test set (right plot below). "

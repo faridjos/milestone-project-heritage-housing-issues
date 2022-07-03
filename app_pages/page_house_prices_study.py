@@ -22,7 +22,7 @@ def page_house_prices_study_body():
     moderately_correlated = ['GarageYrBlt', '1stFlrSF', 'TotalBsmtSF', 'YearRemodAdd', 'LotArea', 'LotFrontage', 'BsmtFinSF1']
     dtype_dict = {'OverallQual': 'object', 'GrLivArea': 'numeric', '2ndFlrSF': 'numeric', 'KitchenQual': 'object', 'YearBuilt': 'numeric', 'GarageArea': 'numeric', 'GarageFinish': 'object', 'GarageYrBlt': 'numeric', '1stFlrSF': 'numeric', 'TotalBsmtSF': 'numeric', 'YearRemodAdd': 'numeric', 'LotArea': 'numeric', 'LotFrontage': 'numeric', 'BsmtFinSF1': 'numeric'}
 
-    st.write("### House Sale Prices study")
+    st.write("### House Sale Price study")
     st.info(
         f"* The client is interested in discovering how the house attributes correlate with the sale price."
         f" Therefore, the client expects data visualizations of the correlated variables against the sale price to show that.")

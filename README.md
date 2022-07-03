@@ -104,14 +104,14 @@ Although your friend has an excellent understanding of property prices in her ow
 ## Dashboard Design
 The dashboard consists of five pages:
 1. The first page describes the project dataset and states the business requiremnents.
-2. The second page fullfills the first project requirement. It starts with stating the requirement in an info box. Three checkboxes implement the user stories relating to the first project requirement (see ref). When checked they display:
+2. The second page fullfills the first project requirement. It starts with stating the requirement in an info box. Three checkboxes implement the user stories relating to the first project requirement (see [Business Requirements](#business-requirements)). When checked they display:
     * A table showing the dataset.
-    * A heatmap of Spearman correlation coefficents.
+    * A heatmap of Spearman correlation coefficients.
     * Scatterplots of correlated variables against sell price.
 The page also has a description of the meaning of the variables and a general conclusion.
-3. The third page fullfills the second project requirement. It has two tables showing the client's inherited houses data and predicted sale prices respectively. The sum of the sale prices is also displayed. The second part of the page has three input widgets and a button that enables the user to predict the sale price based on the inputs.
-4. The fourth page states the project hypothesis and its validation.
-5. The fifth page starts with a general conclusion about the performance of the ML model. The pipeline steps are then presented followed by a bar plot showing the importance of each feature in the train set. The remaining two parts evaluate the ML model by computing the R2 score and three different error measures and by displaying a scatter plot of predicted versus actual sale price (which is the target).
+3. The third page fullfills the second project requirement (see [Business Requirements](#business-requirements)). It has two tables showing the client's inherited houses data and predicted sale prices respectively. The sum of the sale prices is also displayed. The second part of the page has three input widgets and a button that enables the user to predict the sale price based on the inputs.
+4. The fourth page states the project hypothesis and its validation. It shows the distribution of sale price. Finally there is a paragraph about the model's limitation and how it may be connected to the project hypothesis.
+5. The fifth page starts with a general conclusion about the performance of the ML model. The pipeline steps are then presented followed by a bar plot showing the importance of each feature in the train set. The remaining two parts evaluate the ML model by computing the R2 score and three different error measures and by displaying a scatterplot of predicted versus actual sale price (which is the target).
 
 [Back to Table of contents](#table-of-contents)
 

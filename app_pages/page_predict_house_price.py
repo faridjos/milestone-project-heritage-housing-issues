@@ -27,7 +27,7 @@ def page_predict_house_price_body():
 	df['Predicted House Sale Price'] = house_price_prediction
 	st.write(
         f"* The table shows the predicted sale price for the four houses, together with the house features used in the prediction, "
-		"which are the two most important variables we saw in the House Prices Study page: 'Overall Quality' and 'Above Ground Living "
+		"which are the two most important variables we saw in the House Price Study page: 'Overall Quality' and 'Above Ground Living "
 		"Area Square Feet.'"
 	)
 	st.write(df.head())
@@ -35,7 +35,7 @@ def page_predict_house_price_body():
 	# calculate sum of inherited houses predicted prices
 	sum = df['Predicted House Sale Price'].sum()
 	st.write(
-        f"* The sum of the predicted sale price for the four houses is: &nbsp; &nbsp; &nbsp;{sum}  \n"
+        f"* The sum of the predicted sale prices for the four houses is: &nbsp; &nbsp; &nbsp;{sum}  \n"
 	)
 
 	st.write("---")

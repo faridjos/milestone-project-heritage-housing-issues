@@ -43,7 +43,7 @@ def page_house_prices_study_body():
     st.write(
         f"* A correlation study was conducted in the notebook to find  "
         f"the most important variables for determining the house sale price.  \n"
-        f"The seven most important variable are (in order of importance):  \n**{strongly_correlated}**.  \n\n"
+        f"The seven most important variables are (in order of importance):  \n**{strongly_correlated}**.  \n\n"
     )
 
     # Meaning of variables: From README file - "Dataset Content" section

@@ -26,9 +26,9 @@ def page_predict_house_price_body():
 	house_price_prediction = pipeline.predict(df).round(0)
 	df['Predicted House Sale Price'] = house_price_prediction
 	st.write(
-        f"* The table shows the predicted sale price for the four houses, together with the house features used in the prediction, "
+        f"* The table shows the predicted sale prices for the four houses, together with the house features used in the prediction, "
 		"which are the two most important variables we saw in the House Price Study page: 'Overall Quality' and 'Above Ground Living "
-		"Area Square Feet.'"
+		"Area Square Feet'."
 	)
 	st.write(df.head())
 

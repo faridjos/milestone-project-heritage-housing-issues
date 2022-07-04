@@ -55,7 +55,7 @@ Although your friend has an excellent understanding of property prices in her ow
 [Back to Table of contents](#table-of-contents)
 
 ## Project hypothesis and validation.
-* We suspect that the distribution of the sale prices has a long right tail and that it could lead to a problem when it comes to predicting high sale prices.
+* We suspect that the distribution of the sale prices has a long right tail and that it could lead to a problem when it comes to predicting high sale prices. To validate the project hypothesis we plot a combined boxplot/histogram of the sale price.
 
 [Back to Table of contents](#table-of-contents)
 

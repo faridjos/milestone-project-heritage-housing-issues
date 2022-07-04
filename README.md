@@ -109,7 +109,7 @@ The dashboard consists of five pages:
     * A heatmap of Spearman correlation coefficients.
     * Scatterplots of correlated variables against sell price.
 The page also has a description of the meaning of the variables and a general conclusion.
-3. The third page fullfills the second project requirement (see [Business Requirements](#business-requirements)). It has two tables showing the client's inherited houses data and predicted sale prices respectively. The sum of the sale prices is also displayed. The second part of the page has three input widgets and a button that enables the user to predict the sale price based on the inputs.
+3. The third page fullfills the second project requirement (see [Business Requirements](#business-requirements)). It has two tables showing the client's inherited houses data and predicted sale prices respectively. The sum of the sale prices is also displayed. The second part of the page has two input widgets and a button that enables the user to predict the sale price based on the inputs.
 4. The fourth page states the project hypothesis and its validation. It shows the distribution of sale price. Finally there is a paragraph about the model's limitation and how it may be connected to the project hypothesis.
 5. The fifth page starts with a general conclusion about the performance of the ML model. The pipeline steps are then presented followed by a bar plot showing the importance of each feature in the train set. The remaining two parts evaluate the ML model by computing the R2 score and three different error measures and by displaying a scatterplot of predicted versus actual sale price (which is the target).
 
@@ -122,7 +122,7 @@ The page also has a description of the meaning of the variables and a general co
 
 ## Deployment to Heroku
 
-* The App live link is: https://housepricesfarid.herokuapp.com// 
+* The App live link is: https://housepricesfarid.herokuapp.com/ 
 * The project was deployed to Heroku using the following steps:
 1. Create a Procfile which tells Heroku how to run the project
 2. Create a setup.sh file containing the streamlit configuration requirements 
@@ -130,8 +130,8 @@ The page also has a description of the meaning of the variables and a general co
 4. Log in to Heroku and create an App
 5. At the Deploy tab, select GitHub as the deployment method
 6. Select your repository name and click Search. Once it is found, click Connect
-7. Select the branch you want to deploy, then click Deploy Branch
-8. One may also enable automatic deploys so that the app is updated for every push to Github
+7. Select the branch you want to deploy (main), then click Deploy Branch
+8. One may also enable automatic deploys so that the app is updated for every push to Github.
 Click now the button Open App on the top of the page to access your App
 
 [Back to Table of contents](#table-of-contents)

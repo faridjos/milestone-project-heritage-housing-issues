@@ -4,7 +4,7 @@ def page_summary_body():
 
     st.write("### Quick Project Summary")
 
-    # Information from README file - "Dataset Content" section
+    # information from README file - "Dataset Content" section
     st.info(
         f"**Project Dataset**\n"
         f"* The dataset shows house sale prices in Ames, Iowa,"
@@ -13,7 +13,7 @@ def page_summary_body():
         f", kitchen quality, construction date and so on.\n\n")
         
 
-    # Link to README file, so the users can have access to full project documentation
+    # link to README file, so the users can have access to the full project documentation
     st.write(
         f"* For additional information, please visit and **read** the "
         f"[Project README file](https://github.com/faridjos/milestone-project-heritage-housing-issues)")

@@ -94,7 +94,7 @@ def page_house_prices_study_body():
         scatterplot(df, dic, strongly_correlated, dtype_dict)
 
 
-    # function created using code from "HouseSalePrices" notebook - Heatmap section
+# function created using code from "HouseSalePrices" notebook - Heatmap section
 def heatmap(df):
     import numpy as np
     import matplotlib.pyplot as plt

@@ -28,6 +28,8 @@ def page_project_hypothesis_body():
         f"* The models we have created may not accurately predict sale prices above $400000 "
         f"(see scatterplots on the ML Regressor Model page). \n"
         f"* This could be connected to the outliers mentioned above (with sale prices above $466075)"
-        f" but it cannot be proven. Further investigation is needed. One could for example transform"
-        f" the sale price variable so that its distribution looks more symmetrical.")
+        f". Initial steps were taken to improve the model for predicting higher prices: The sale price"
+        f" variable was transformed to make its distribution more symmetrical but more work is needed: "
+        f" For each transformation tried, include it in the ML model and evaluate the new model."
+    )
         
